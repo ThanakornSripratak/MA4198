@@ -12,12 +12,11 @@ n = 100000     # Number of Monte Carlo simulations
 def norm_cdf(x):
     return 0.5 * (1 + erf(x / np.sqrt(2)))
 
-# Theoretical Black–Scholes Price
+# BLS
 d1 = (log(S0 / K) + (r + 0.5 * sigma**2) * T) / (sigma * sqrt(T))
 d2 = d1 - sigma * sqrt(T)
 bs_price = S0 * norm_cdf(d1) - K * exp(-r * T) * norm_cdf(d2)
 
-# Generate RV
 Z = np.random.randn(n)  # Z ~ N(0,1)
 
 # Simulate
