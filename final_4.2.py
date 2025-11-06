@@ -18,7 +18,7 @@ def asian_call_mc(S0=50.0, K=50.0, r=0.05, sigma=0.2, T=1.0, m=12, n=10_000, see
     SE = np.sqrt((np.sum(X**2) - n * vhat**2) / (n * (n - 1)))
     return vhat, SE
 
-#Parameters
+# Parameters
 S0, T, r, sigma, m = 50.0, 1.0, 0.05, 0.2, 12
 Ks = [40, 50, 60]
 
